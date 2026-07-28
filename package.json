@@ -1,0 +1,15 @@
+{
+  "name": "local-lip-reading-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline LAN scoreboard and controller for a two-team lip-reading game.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js",
+    "test": "node scripts/smoke-test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

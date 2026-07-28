@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>您在說什麼 - 手機控制</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="control-page">
+    <main class="control-shell">
+      <header class="control-header">
+        <div>
+          <p class="eyebrow">主持控制</p>
+          <h1>您在說什麼</h1>
+        </div>
+        <div id="controlTimer" class="control-timer">05:00</div>
+      </header>
+
+      <section id="roundControls" class="round-controls" aria-label="回合切換"></section>
+
+      <section class="global-controls">
+        <button id="timerButton" class="primary-button" type="button">開始</button>
+        <button id="undoButton" class="plain-button" type="button">Undo</button>
+        <button id="resetButton" class="danger-button" type="button">重置全部</button>
+      </section>
+
+      <section id="controlTeams" class="control-teams" aria-live="polite"></section>
+
+      <footer class="control-footer">
+        <span id="controlStatus">連線中</span>
+      </footer>
+    </main>
+
+    <script src="/control.js" defer></script>
+  </body>
+</html>

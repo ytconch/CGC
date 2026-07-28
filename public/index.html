@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>您在說什麼 - 電腦顯示</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="display-page">
+    <main id="waitScreen" class="wait-screen" aria-live="polite">
+      <section class="wait-panel">
+        <p class="eyebrow">您在說什麼</p>
+        <h1>等待手機控制端連線</h1>
+        <img class="qr-large" src="/qr.svg" alt="手機控制頁 QR Code">
+        <p id="waitUrl" class="url-text"></p>
+        <div class="wait-actions">
+          <button id="questionsButton" class="primary-button" type="button">題庫建置</button>
+          <button id="soundButton" class="plain-button" type="button">開啟音效</button>
+        </div>
+      </section>
+    </main>
+
+    <main id="stageScreen" class="stage-screen hidden">
+      <header class="stage-header">
+        <div id="roundBadge" class="round-badge">第 1 回合</div>
+        <div id="timer" class="timer" aria-live="polite">05:00</div>
+      </header>
+
+      <section class="teams" aria-live="polite">
+        <article id="teamA" class="team-panel team-a"></article>
+        <article id="teamB" class="team-panel team-b"></article>
+      </section>
+
+      <footer class="stage-footer">
+        <span id="statusLine">等待控制端</span>
+        <span id="questionCount">0 題</span>
+      </footer>
+
+      <aside id="reconnectQr" class="reconnect-qr hidden">
+        <img src="/qr.svg" alt="重新連線 QR Code">
+        <span>重連</span>
+      </aside>
+    </main>
+
+    <dialog id="questionsDialog" class="question-dialog">
+      <form method="dialog" class="dialog-shell">
+        <header>
+          <h2>題庫</h2>
+          <button id="closeQuestions" class="icon-button" value="cancel" type="submit">關閉</button>
+        </header>
+        <textarea id="questionsInput" spellcheck="false" placeholder="一行一題"></textarea>
+        <div id="roundSummary" class="round-summary" aria-live="polite"></div>
+        <div class="dialog-actions">
+          <span id="saveStatus"></span>
+          <button id="saveQuestions" class="primary-button" type="button">建置三回合</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="/display.js" defer></script>
+  </body>
+</html>

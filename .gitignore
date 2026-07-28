@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Local environment settings
+.env
+.env.*
+!.env.example
+
+# Project artifacts and activity photos are kept locally
+outputs/
+photo/
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
